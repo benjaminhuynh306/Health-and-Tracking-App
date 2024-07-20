@@ -1,5 +1,6 @@
-import React from 'react';
+import React from 'react'; // Import React library
 
+// Goals component
 function Goals() {
   return (
     <div>

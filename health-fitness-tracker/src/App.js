@@ -1,13 +1,12 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import './App.css';
-import Login from './components/Login';
-import Dashboard from './components/Dashboard';
-import ActivityTracker from './components/ActivityTracker';
-import HealthMetrics from './components/HealthMetrics';
-import Goals from './components/Goals';
-import Navigation from './components/Navigation';
-import PrivateRoute from './utils/PrivateRoute';
+import React from 'react'; // Import React library
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Import necessary components from react-router-dom
+import './App.css'; // Import CSS for the App component
+import Login from './components/Login'; // Import the Login component
+import Dashboard from './components/Dashboard'; // Import the Dashboard component
+import ActivityTracker from './components/ActivityTracker'; // Import the Activity Tracker component
+import HealthMetrics from './components/HealthMetrics'; // Import the Health Metrics component
+import Goals from './components/Goals'; // Import the Goals component
+import Navigation from './components/Navigation'; // Import the Navigation component
 
 function App() {
   return (
@@ -16,13 +15,14 @@ function App() {
         <header className="App-header">
           <h1>Health and Fitness Tracker</h1>
         </header>
-        <Navigation />
+        <Navigation /> {/* Include the navigation component */}
         <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/activity-tracker" element={<ActivityTracker />} />
-          <Route path="/health-metrics" element={<HealthMetrics />} />
-          <Route path="/goals" element={<Goals />} />
+          {/* Define routes for different pages/components */}
+          <Route path="/login" element={<Login />} /> {/* Route for the Login page */}
+          <Route path="/" element={<Dashboard />} /> {/* Route for the Dashboard page */}
+          <Route path="/activity-tracker" element={<ActivityTracker />} /> {/* Route for the Activity Tracker page */}
+          <Route path="/health-metrics" element={<HealthMetrics />} /> {/* Route for the Health Metrics page */}
+          <Route path="/goals" element={<Goals />} /> {/* Route for the Goals page */}
         </Routes>
       </div>
     </Router>
